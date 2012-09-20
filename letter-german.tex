@@ -1,0 +1,47 @@
+\documentclass[
+    foldmarks=on,         % Faltmarken setzen
+    paper=a4,             % Papierformat
+    fromphone=on,         % Telefonnummer im Absender
+    fromrule=off,         % keine Linie unter Absender
+    fromfax=off,          % keine Faxnummer
+    fromemail=on,         % Emailadresse
+    fromurl=off,          % keine Homepage
+    subject=beforeopening % Plazierung der Betreffzeile
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[scaled]{helvet}
+\usepackage{lmodern}
+
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.1in}
+
+\begin{document}
+
+\setkomavar{fromname}{Your Name}
+\setkomavar{fromaddress}{Eine Straße 2\\76123 Karlsruhe}
+\setkomavar{fromphone}{+49 721 123 456}
+\setkomavar{fromemail}{your.name@email.net}
+
+\setkomavar{backaddressseparator}{%
+~\raisebox{0.25ex}{\textbf{\Large.}}~}
+\setkomafont{backaddress}{\sffamily\tiny}
+
+\begin{letter}{%         Empfaenger-Adresse
+Superfirma\\
+Wurststraße 123\\
+75090 Pforzheim
+}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+Hiermit schreibe ich ihnen eine Brief, ich hoffe er gefällt ihnen.
+
+\closing{Mit freundlichen Grüßen,}
+
+\end{letter}
+
+\end{document}
